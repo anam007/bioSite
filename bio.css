@@ -1,21 +1,25 @@
 body{
     font-family: 'Oswald', Verdana, Arial, sans-serif;
+    
+    
 }
-
-
 
 :root{
     --primary: hsla(348, 97%, 63%), 0.65%;
     --secondary: hsla(230, 95%, 62%, 0.65%);
+    
 }
 
 .bgimg{
-    background-image: linear-gradient(135deg, var(--primary), var(--secondary)),
-                        url('/Users/anamumanah/csd/bioSite/images/IMG_3408.jpeg');
+    background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+    overflow: auto;
+    padding-bottom: 0;
+                        
+                        
                         
     background-size: cover;
     background-repeat: no-repeat;
-    
+    backdrop-filter: blur(2px);
     height: 100vh;
     
     
@@ -24,16 +28,21 @@ body{
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 header{
     text-align: center;
+    backdrop-filter: blur(8px);
 }
 
 #navbar {
-    overflow: hidden;
+    overflow: auto;
     background-color: #366ED8;
     border-bottom: 15px solid #FAD9E6;
+    
+    
+    
 }
 
 
@@ -44,6 +53,7 @@ header{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    justify-content: center;
 }
 
 #navbar a:hover {
@@ -59,8 +69,14 @@ header{
     width: 900px;
     display: block;
     margin: 50px auto ;
-    border: 2px solid #366ED8;
-    border-radius: 5%;
+    border: 4px solid #366ED8;
+    border-radius: 30%;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+
+  .carousel-wrapper:hover{
+    box-shadow: 0 30px 60px 0 rgba(152, 39, 167, 0.322);
   }
   
   .carousel-item {
@@ -74,11 +90,16 @@ header{
     transition: all 0.5s ease-in-out;
   }
   .arrow{
-    border: solid #FAD9E6;
+    border:  solid #FAD9E6;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 12px;
   }
+
+.arrow:hover{
+  box-shadow: 0 10px 16px 0 rgba(165, 39, 182, 0.507);
+}
+
   .arrow-prev {
     left: 30px;
     position: absolute;
@@ -101,19 +122,19 @@ header{
     opacity: 1;
     background: url('/Users/anamumanah/csd/bioSite/images/IMG_0728.jpeg');
     background-size: contain;
-    border-radius: 5%;
+    border-radius: 30%;
     
   }
   .item-2 {
     background: url('/Users/anamumanah/csd/bioSite/images/IMG_3408.jpeg');
     background-size: contain;
-    border-radius: 5%;
+    border-radius: 30%;
     
   }
   .item-3 {
     background: url('/Users/anamumanah/csd/bioSite/images/IMG_1357-preview 2.jpeg');
     background-size: contain;
-    border-radius: 5%;
+    border-radius: 30%;
     
     
   }
@@ -130,7 +151,234 @@ header{
     opacity: 1;
   } 
 
+  .arrow :hover{
+    color: #366ED8;
+  }
+
 h1,h2{
     color: #FA4EAB;
     text-shadow: #366ED8;
+    font-weight: 400;
+    transform: matrix();
+    font-size: 60px;
+}
+
+p{
+  line-height: 1.5;
+  color: rgb(75, 129, 182);
+}
+
+
+
+
+
+
+/** about page */
+.abt-img-container{
+  padding: 50px 50px 17px 50px;
+}
+
+.abt-interview{
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.abt-h2{
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+h4{
+  padding-bottom: 10px;
+  text-align: center;
+  color: #366ED8;
+  font-weight: 600;
+  font-size: 20px;
+  
+}
+
+.card-h4{
+  padding-top: 10px;
+}
+
+.abt-img{
+  width: 300px;
+  height: 300px;
+  border: 3px solid  #FA4EAB;
+  border-radius: 100%;
+  float: left;  
+}
+
+.abt-img:hover{
+  box-shadow: 0 10px 16px 0 rgba(49, 108, 175, 0.322);
+}
+
+.abt-img2{
+  height: 300px;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20%;
+  border: 2px solid #FA4EAB;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ 
+  
+}
+
+.abt-img2:hover{
+  box-shadow: 0 8px 16px 0 rgba(49, 108, 175, 0.322);
+}
+
+.abt-table{
+  padding-top: 90px;
+  padding-bottom: 20px;
+
+}
+
+.abt-summary{
+padding-right: 20px;
+  
+}
+
+footer {
+  background-color: #FA4EAB;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin-top: 0;
+  clear: both;
+}
+
+.abt-footer{
+  padding-left: 20px;
+}
+
+
+/** hobbies page */
+.hob-header{
+  height: 80px;
+  padding-top: 20px;
+  border-bottom: 1px solid #FA4EAB;
+   
+}
+
+.abt-header{
+  height: 75px;
+  overflow: auto; 
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid #FA4EAB;
+}
+
+.hob-img1{
+  height: 300px;
+  width: 400px;
+  border-radius: 100%;
+  border: 4px solid #366ED8;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+  padding: 30px;
+  }
+  
+  .div1 { grid-area: 1 / 2 / 2 / 3; }
+  .div2 { grid-area: 1 / 1 / 2 / 2; }
+
+  
+
+.hob-h2{
+  text-align: center;
+  padding: 30px;
+}
+
+.hob-h23{
+  padding: 40px;
+  text-align: center;
+
+}
+
+.hob-img1:hover{
+  box-shadow: 0 30px 60px 0 rgba(152, 39, 167, 0.322)
+}
+
+.hob-img2{
+  height: 300px;
+  width: 400px;
+  border-radius: 100%;
+  border: 4px solid #366ED8;
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.hob-img2:hover{
+  box-shadow: 0 30px 60px 0 rgba(152, 39, 167, 0.322)
+}
+
+.hob-footer{
+  padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #f29bcb;
+  font-size: 20px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn2 {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #f29bcb;
+  font-size: 20px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 980px;
+}
+
+.btn:hover {
+  background: #FA4EAB;
+  background-image: -webkit-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: -moz-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: -ms-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: -o-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: linear-gradient(to bottom, #FA4EAB, #3498db);
+  text-decoration: none;
+}
+
+.btn2:hover {
+  background: #FA4EAB;
+  background-image: -webkit-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: -moz-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: -ms-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: -o-linear-gradient(top, #FA4EAB, #3498db);
+  background-image: linear-gradient(to bottom, #FA4EAB, #3498db);
+  text-decoration: none;
 }
